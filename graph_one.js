@@ -103,5 +103,3 @@ function cleanData(data, filterer, comparator, numResults){
     }
     return filtered_data.slice(0,numResults)
 }
-
-renderGraph1(0, 2020)

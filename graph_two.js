@@ -97,5 +97,3 @@ function getGenreCount(data, country){
     return new_data
 }
 
-renderGraph2("Global")
-

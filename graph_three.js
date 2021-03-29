@@ -146,5 +146,3 @@ function clearSvg(){
         old[0].remove()
     }
 }
-
-renderGraph3("All")
