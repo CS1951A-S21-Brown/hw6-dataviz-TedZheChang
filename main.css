@@ -9,4 +9,83 @@
     text-align: center;
 }
 
-/* Include any custom CSS styling here! */
+#graph1{
+    text-align: center; 
+    display: block
+}
+
+#graph2{
+    margin-top: 40px;
+    text-align: center; 
+    display: block
+}
+
+
+#graph3{
+    text-align: center; 
+    display: block
+}
+
+#inputs{
+    display:inline-block;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+#tooltip {                                                        
+    background: #3e64ff;                                               
+    box-shadow: 0 0 5px #999999;                                    
+    color: white;                                                 
+    display: none;                                           
+    font-size: 12px;                                                                                    
+    position: absolute;                                        
+    text-align: center;                                          
+    width: 180px;
+    top: 75%;
+    right: 40%;                                                   
+    z-index: 999;                                               
+}                                                                 
+.apply{
+    margin-left: 0;
+    background-color: white;
+    border: black solid 1.5px;
+    border-width: 1px;  
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+    color: #3e64ff;
+    border-color: #3e64ff;
+    display: inline-block;
+    height:30px;
+    width: 60px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+.input {
+    display: inline-block;
+    height: 30px;
+    border-width: 1px;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.apply:hover{
+    background-color: #3e64ff;
+    color: white;
+}
+
+
+#written{
+    margin-left: 10%;
+    margin-right:10%;
+}
+
+#written-container{
+    text-align: center;
+}
+
+p {
+    display: inline-block
+}
+

@@ -15,14 +15,102 @@
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <div id="graph1">
+                <div id="inputs">
+                    <input class="input" placeholder="Start Year" id="startYear" defaultValue="1900"><input class="input" placeholder="End Year" id="endYear" defaultValue="2020">
+                    <div><button class="apply" onclick="renderGraph1(document.getElementById('startYear').value, document.getElementById('endYear').value)">Apply</button></div>
+                </div>
+            </div>
+            <div id="graph2">
+                    <div id="inputs">
+                            <span>Country </span>
+                            <button class="apply" onclick="renderGraph2('Global')">All</button>
+                            <button class="apply" onclick="renderGraph2('NA')">NA</button>
+                            <button class="apply" onclick="renderGraph2('JP')">JP</button>
+                            <button class="apply" onclick="renderGraph2('EU')">EU</button>
+                            <button class="apply" onclick="renderGraph2('Other')">Others</button> 
+                    </div>
+            </div><br/>
         </div>
         <div class="col-lg-6">
-            <div id="graph3"></div>
+            <div id="graph3">
+                    <div class="dropdown">
+                            <select class="input" id="genre">
+                                <option value="All"> All Genres </option>
+                                <option value="Sports"> Sports </option>
+                                <option value="Platform"> Platform </option>
+                                <option value="Racing"> Racing </option>
+                                <option value="Role-Playing"> Role-Playing </option>
+                                <option value="Puzzle"> Puzzle </option>
+                                <option value="Misc"> Misc </option>
+                                <option value="Shooter"> Shooter </option>
+                                <option value="Simulation"> Simulation </option>
+                                <option value="Action"> Action </option>
+                                <option value="Fighting"> Fighting </option>
+                                <option value="Adventure"> Adventure </option>
+                                <option value="Strategy"> Strategy </option>
+                            </select>
+                            <button class="apply" onclick="renderGraph3(document.getElementById('genre').value)"> Apply </button>
+                    </div>
+            </div>
         </div>
+        <div class="header">
+                <h3>Written Questions</h3>
+        </div>
+            <div id="written">
+                <p><b>1.</b> The top left graph answers the question of which 10 video games were the most popular given a time frame. 
+                It shows the highest selling video games between the inputted years. The bottom left graph answers the question of 
+                which genres are most popular in a given region. For the inputted region it shows how many sales there were in game
+                of each type of genre. The pie chart on the right answers the question of which publishers have been most 
+                successful for each genre. For the top 5 publishers in the provided genre(s) it shows the proportion of video 
+                game sales for each company.</p>
+
+                <p>
+                    <b>2.</b> 
+                    <ul> 
+                        <li> One reason why d3 was helpful was because it factors out alot of the scaling and size calculations. I didn't have to worry about manually finding the spacing of the bars or the length they had to be. </li>
+                        <li> Another helpful part of d3 is that it supports easily transitioning between different set/subsets of data. As a result when trying to show the rankings between different years or genres it was smooth to create/transition between these different graphs.</li>
+                        <li> Lastly d3 was helpful for my visualization because it allows one to attach event listeners and annotations to anything that is drawn. As such it was easier to annotate and add tooltips that help to give more information in a readable way for the data visualsations. </li>
+                    </ul>
+                </p>
+
+                <p>
+                    <b>3.</b> 
+                    <ul> 
+                        <li> One reason someone might not want to use d3 is that it does not have any built in statistcial model or calculations. As a result, unlike other graphing software which includes these features, one would have to separately perform these analyses then manually figure out how to draw them onto the graph, which can be difficult. </li>
+                        <li> Another reason to not use d3 is that it relies on the browser/page being allowed to use javascript. As such if javascript is not enabled then the visualization would not work. On the other hand something like an image or uploaded svg inserted into the DOM would always load.</li>
+                        <li> D3 would also not be the best tool for creating a visualization if one is not very familiar with javascript/is using a pipeline that is hard to connect to javascript. In situations like this it would be easier to use a graphing software that one is more comfortable with/ is more well suited to the pipeline one is using. </li>
+                    </ul>
+                </p>
+
+                <p><b>4.</b> One group that would find my dashboard fairly accessible are people use assitive technologies such as 
+                    screen readers. This is because I avoid using tools like overlays or sliders when displaying data or asking for use 
+                    input, which is helpful for assistive technology according to the guide for accesible visualizations under the assistive 
+                    technology section. A group that may find my dashboard more difficult to view though are certain groups with colorblindness.
+                    This is because I don't have much color contrast on my graphs, with everything being a shade of blue or purple. As such, according to
+                    the color blindess section of the same guide, some parts of my graph may be more difficult to distinguish. As such some actions that I 
+                    could take would be to choose more contrasting colors for my graphs to aid in colorblindness. Additionally I could run my dashboard
+                    through some colorblindess filters to better verify which parts of my dashboard need improvements for contrasts, shapes, or anything else. 
+                </p>
+
+                <p><b>5.</b> One factor that prevented me from taking these steps was my inexperience with d3. Unfortunately I don't understand
+                    all the capabilities of d3, which prevented me from experimenting with potential design choices that could improve the 
+                    accessilbity of my page. For example I don't completely understand line drawing and paths, which prevents me from creating and 
+                    testing better labeling styles. Another limiting factor was time. Due to the deadline of the project I did not have enough
+                    time to fully run through my designs and look through every area that could be improved/tested for accesibility. As such I did 
+                    have time to do things like run my dashboard through WAIVE filters or anything alike. 
+                </p>
+
+            </div>
     </div>
+
+    
     <!--Feel free to add more JavaScript files as needed-->
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="graph_one.js"></script>
+    <script type="text/javascript" src="graph_two.js"></script>
+    <script type="text/javascript" src="graph_three.js"></script>
+
+    
 </body>
 </html>
